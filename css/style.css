@@ -1,0 +1,281 @@
+:root {
+    --color-azul: #004F4D;
+    --color-oscuro: #1F2024;
+    --color-medio: #4B4952;
+    --color-claro: #A68F97;
+    --color-fondo: #127369;
+}
+
+/* Reset de estilos por defecto del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url("/");
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de encabezado y navegación */
+header {
+    background: #004F4D;
+    color: #fff;
+    padding: 1rem;
+    width: 250px; /* Ancho de la barra lateral */
+    height: 100vh; /* Alto completo de la pantalla */
+    position: fixed; /* Barra lateral fija */
+    left: 0; /* Alinear a la izquierda */
+    top: 0; /* Alinear arriba */
+    overflow-y: auto; /* Scroll vertical si es necesario */
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav .profile-img {
+    width: 180px; /* Tamaño de la imagen circular */
+    height: 180px;
+    border-radius: 50%; /* Para hacerla circular */
+    display: block;
+    margin-bottom: 1rem; /* Margen abajo */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem; /* Espacio arriba */
+    width: 100%;
+}
+
+header nav ul li {
+    margin-bottom: 1rem; /* Espacio abajo entre elementos */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block; /* Hacer los enlaces de bloque */
+    padding: 0.5rem 1rem; /* Espacio alrededor de los enlaces */
+    text-align: center;
+}
+
+header nav ul li a:hover {
+    background-color: #555; /* Cambiar el color de fondo al pasar el mouse */
+}
+
+
+/* Estilos de contenido principal */
+main {
+    margin-left: 250px; /* Dejar espacio a la izquierda para la barra lateral */
+    padding: 2rem;
+}
+
+/* Estilo general para las secciones */
+main section {
+    background-color: #127369; /* Color de fondo claro para el contenedor */
+    border: 2px solid #1F2024; /* Borde metálico */
+    border-radius: 15px; /* Esquinas curvas */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espaciado entre secciones */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+/* Estilo para los encabezados dentro de las secciones */
+main section h2 {
+    font-family: 'Arial', sans-serif; /* Tipografía de los encabezados */
+    color: #A68F97; /* Color de los encabezados */
+    margin-bottom: 15px; /* Espaciado debajo de los encabezados */
+    font-size: 1.5rem; /* Tamaño del texto */
+    border-bottom: 2px solid #1F2024; /* Línea debajo del h2 */
+    padding-bottom: 10px; /* Espaciado interno debajo del h2 */
+}
+
+/* Estilo para los párrafos */
+main section p {
+    font-family: 'Georgia', serif; /* Tipografía de los párrafos */
+    color: #5D8A66; /* Color del texto */
+    line-height: 1.6; /* Altura de la línea */
+    margin-bottom: 15px; /* Espaciado debajo de los párrafos */
+}
+
+/* Estilo para las imágenes */
+main section img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%; /* Ajuste automático del tamaño de la imagen */
+    border-radius: 10px; /* Esquinas curvas */
+    margin-bottom: 15px; /* Espaciado debajo de las imágenes */
+}
+
+main section.unidad {
+    display: block;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #45214A;
+}
+
+main section.unidad.pdf {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* Estilo para la lista de redes sociales en main section */
+main section ul.redes {
+    list-style: none; /* Quitar los puntos de la lista */
+    padding: 0;
+    display: flex; /* Disposición horizontal */
+    justify-content: space-around; /* Espacio igual entre elementos */
+}
+
+/* Estilo para cada elemento de la lista */
+main section ul.redes li {
+    margin: 10px; /* Espaciado entre elementos */
+}
+
+/* Estilo para los botones de contacto */
+main section ul.redes li .contact-button {
+    display: inline-block; /* Convertir en botón */
+    padding: 10px; /* Relleno interno */
+    border-radius: 5px; /* Esquinas curvas */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+}
+
+/* Estilo para las imágenes dentro de los botones de contacto */
+main section ul.redes li .contact-button img {
+    max-width: 55px; /* Tamaño máximo de la imagen */
+    border-radius: 10px; /* Esquinas curvas de la imagen */
+}
+
+/* Colores específicos para cada plataforma */
+main section ul.redes li .contact-button.instagram {
+    background-color: #E1306C; /* Color de fondo para Instagram */
+}
+
+main section ul.redes li .contact-button.gmail {
+    background-color: #D44638; /* Color de fondo para Gmail */
+}
+
+main section ul.redes li .contact-button.whatsapp {
+    background-color: #25D366; /* Color de fondo para WhatsApp */
+}
+
+main section ul.redes li .contact-button.linkedin {
+    background-color: #fff; /* Color de fondo para Linkedin */
+}
+
+main section ul.redes li .contact-button.github {
+    background-color: #555 /* Color de fondo para GitHub */
+}
+
+/* Efecto hover para los botones de contacto */
+main section ul.redes li .contact-button:hover {
+    transform: scale(1.1); /* Aumentar tamaño al pasar el ratón */
+}
+
+/* Estilo para los enlaces */
+main section a.button {
+    display: inline-block; /* Convertir en botón */
+    padding: 10px 20px; /* Relleno interno */
+    margin-top: 10px; /* Espaciado superior */
+    background-color: #007BFF; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Esquinas curvas del botón */
+    transition: background-color 0.3s; /* Transición para el cambio de color */
+}
+
+main section a.button:hover {
+    background-color: #0056b3; /* Color del fondo del botón al pasar el ratón */
+}
+
+
+section {
+    margin-bottom: 2rem;
+    text-align: center; /* Centrar el contenido de las secciones */
+}
+
+section h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+.buttonB {
+    flex-flow: column wrap;
+    align-items: center;
+    display: flex;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #1F2024;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+/* Estilos de pie de página */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    clear: both; /* Limpiar los flotantes */
+    margin-left: 250px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header {
+        width: 100%; /* Barra lateral ocupa todo el ancho en dispositivos pequeños */
+        height: auto; /* Altura automática */
+        position: static; /* Volver a posición estática */
+        margin-bottom: 1rem; /* Espacio abajo */
+        padding-bottom: 1rem; /* Espacio abajo */
+    }
+
+    header nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    main {
+        margin-left: 0; /* Eliminar margen izquierdo en dispositivos pequeños */
+        padding: 1rem; /* Menos relleno */
+    }
+
+    section {
+        margin-bottom: 1rem; /* Menos espacio abajo */
+    }
+}
