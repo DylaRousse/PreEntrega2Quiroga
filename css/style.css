@@ -102,7 +102,7 @@ main section h2 {
 /* Estilo para los párrafos */
 main section p {
     font-family: 'Georgia', serif; /* Tipografía de los párrafos */
-    color: #5D8A66; /* Color del texto */
+    color: #a4b2ff; /* Color del texto */
     line-height: 1.6; /* Altura de la línea */
     margin-bottom: 15px; /* Espaciado debajo de los párrafos */
 }
@@ -131,21 +131,125 @@ main section.unidadI {
     background-color: #45214A;
 }
 
-.pdf, .descripcion {
-    padding: 1px; /* Relleno para los elementos */
+/*
+PROYECTOS
+*/
+
+.proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las secciones */
+    justify-content: space-between; /* Distribuye las secciones uniformemente */
 }
 
-.titlePdf {
-    color: #1F2024;
+.proyecto {
+    width: calc(50% - 10px); /* Ancho de cada proyecto, calculado para 2 columnas */
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento al pasar el mouse */
+}
+
+.proyecto img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc; /* Borde inferior para la imagen */
+}
+
+.proyecto .contenido {
+    padding: 20px;
+}
+
+.proyecto h3 {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.proyecto p {
+    margin: 10px 0;
+}
+
+.proyecto .precio {
+    font-weight: bold;
+    color: #007BFF; /* Color del precio destacado */
+}
+
+.proyecto .boton-compra {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.proyecto .boton-compra:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el mouse */
 }
 
 /*
-OGANIZADOR HORIZONTAL DE BOX DEL PDF
+TIENDA
 */
 
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: calc(33.33% - 20px); /* Adjust for spacing */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.product h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product .description {
+    margin-bottom: 15px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product .price {
+    font-weight: bold;
+    color: #007BFF; /* Highlighted price color */
+    margin-bottom: 10px;
+}
+
+.product .buy-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/*
+INORMACION
+*/
+
+
+/* OGANIZADOR HORIZONTAL DE BOX DEL PDF */
 .pdfDescripcion {
     display: flex; /* Activa el modo flexbox para el contenedor */
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    justify-content: space-around; /* Distribuye el espacio entre los elementos */
     align-items: center; /* Alinea los elementos verticalmente al centro */
 }
 
@@ -157,6 +261,24 @@ main section.unidad.pdf {
     width: 200px;
     height: 300px;
     overflow: hidden;
+}
+
+.pdfArchivo {
+    width: 240px;
+    height: 340px;
+    overflow: hidden;
+}
+
+.pdf, .descripcion {
+    padding: 4px; /* Relleno para los elementos */
+}
+
+.titlePdf {
+    color: #05070f;
+}
+
+.skills {
+    color: #0b0031;
 }
 
 /*
@@ -236,7 +358,6 @@ main section a.button:hover {
     background-color: #0056b3; /* Color del fondo del botón al pasar el ratón */
 }
 
-
 section {
     margin-bottom: 2rem;
     text-align: center; /* Centrar el contenido de las secciones */
@@ -280,53 +401,10 @@ BOTON "VER MAS"
 }
 
 /*
-TEXTO OCULTO DEL BLOG
+BLOG
 */
 
-.textooculto {
-    display: none;
-}
-
-.blog.unidad.container p {
-    display: inline;
-}
-
-input[type="checkbox"] {
-    height: 2em;
-    display: block;
-    appearance: none;
-}
-
-label {
-    position: relative;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    background-color: #007BFF;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-label::before {
-    content: "Leer mas...";
-}
-
-input[type="checkbox"]:checked ~ label::before {
-    content: "Leer menos";
-}
-
-.leermas:has(~ input[type="checkbox"]:checked) {
-    display: none;
-}
-
-.textooculto:has(~ input[type="checkbox"]:checked) {
-    display: inline;
-}
-
-/*
-FECHA
-*/
-
+/*fecha*/
 .fecha {
     display: flex;
     justify-content: flex-end; /* Aligns the content to the right */
