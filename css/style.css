@@ -10,6 +10,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-image: url("/assets/recursos-img/fondo.png");
+    width: 100%; /* Ancho completo de la pantalla */
     margin: 0;
     padding: 0;
 }
@@ -19,10 +20,10 @@ header {
     background: #004F4D;
     color: #fff;
     padding: 1rem;
-    width: 250px; /* Ancho de la barra lateral */
+    width: 15.625rem; /* Ancho de la barra lateral */
     height: 100vh; /* Alto completo de la pantalla */
     position: fixed; /* Barra lateral fija */
-    left: 0; /* Alinear a la izquierda */
+    left: 0px; /* Alinear a la izquierda */
     top: 0; /* Alinear arriba */
     overflow-y: auto; /* Scroll vertical si es necesario */
 }
@@ -34,8 +35,8 @@ header nav {
 }
 
 header nav .profile-img {
-    width: 180px; /* Tamaño de la imagen circular */
-    height: 180px;
+    width: 11.25rem; /* Tamaño de la imagen circular */
+    height: 11.25rem;
     border-radius: 50%; /* Para hacerla circular */
     display: block;
     margin-bottom: 1rem; /* Margen abajo */
@@ -67,7 +68,7 @@ header nav ul li a:hover {
 
 /* Estilos de contenido principal */
 main {
-    margin-left: 250px; /* Dejar espacio a la izquierda para la barra lateral */
+    margin-left: 15.625rem; /* Dejar espacio a la izquierda para la barra lateral */
     padding: 2rem;
 }
 
@@ -75,20 +76,20 @@ main {
 main section {
     background-color: #127369; /* Color de fondo claro para el contenedor */
     border: 2px solid #1F2024; /* Borde metálico */
-    border-radius: 15px; /* Esquinas curvas */
-    padding: 20px; /* Espaciado interno */
-    margin-bottom: 20px; /* Espaciado entre secciones */
-    box-shadow: 0 4px 8px 20px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    border-radius: .9375rem; /* Esquinas curvas */
+    padding: 1.25rem; /* Espaciado interno */
+    margin-bottom: 1.25rem; /* Espaciado entre secciones */
+    box-shadow: 0 .25rem .5rem 1.25rem rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
 }
 
 /* Estilo para los encabezados dentro de las secciones */
 main section h2 {
     font-family: 'Arial', sans-serif; /* Tipografía de los encabezados */
     color: #A68F97; /* Color de los encabezados */
-    margin-bottom: 15px; /* Espaciado debajo de los encabezados */
+    margin-bottom: .9375rem; /* Espaciado debajo de los encabezados */
     font-size: 1.5rem; /* Tamaño del texto */
     border-bottom: 2px solid #1F2024; /* Línea debajo del h2 */
-    padding-bottom: 10px; /* Espaciado interno debajo del h2 */
+    padding-bottom: .625rem; /* Espaciado interno debajo del h2 */
 }
 
 /* Estilo para los párrafos */
@@ -96,7 +97,7 @@ main section p {
     font-family: 'Georgia', serif; /* Tipografía de los párrafos */
     color: #a4b2ff; /* Color del texto */
     line-height: 1.6; /* Altura de la línea */
-    margin-bottom: 15px; /* Espaciado debajo de los párrafos */
+    margin-bottom: .9375rem; /* Espaciado debajo de los párrafos */
 }
 
 /* Estilo para las imágenes */
@@ -105,28 +106,28 @@ main section img {
     margin-left: auto;
     margin-right: auto;
     max-width: 80%; /* Ajuste automático del tamaño de la imagen */
-    border-radius: 10px; /* Esquinas curvas */
-    margin-bottom: 15px; /* Espaciado debajo de las imágenes */
+    border-radius: .625rem; /* Esquinas curvas */
+    margin-bottom: .9375rem; /* Espaciado debajo de las imágenes */
 }
 
 main section.unidadIndex {
     display: block;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
     background-color: #250e50;
 }
 
 main section.unidadInfo {
     display: block;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
     background-color: #680775;
 }
 
 main section.unidadBlog {
     display: block;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 3.125rem;
+    margin-right: 3.125rem;
     background-color: #130330;
 }
 
@@ -135,18 +136,30 @@ NUEVO USUARIO
 */
 
 .nuevoUsuario {
-    padding: 2em 1em 2em 1em;
-    border: #0b0031 solid;
-    background-color: #819e00;
+    background-color: #520032;
+    color: #b49595;
+    border: .125rem solid #1F2024; /* Borde metálico */
+    border-radius: .9375rem; /* Esquinas curvas */
+    padding: 1.25rem; /* Espaciado interno */
+    margin-bottom: 1.25rem; /* Espaciado entre secciones */
+    box-shadow: 0 .25rem .5rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+
+.textUsuario {
+    font-family: 'Arial', sans-serif; /* Tipografía de los encabezados */
+    margin-bottom: .9375rem; /* Espaciado debajo de los encabezados */
+    font-size: 1.125rem; /* Tamaño del texto */
+    border-bottom: .125rem solid #000000; /* Línea debajo del h2 */
+    padding-bottom: .625rem; 
 }
 
 .register-form {
-    max-width: 400px;
-    margin: 40px auto;
-    padding: 20px;
+    max-width: 25rem;
+    margin: 2.5rem auto;
+    padding: 1.25rem;
     background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: .0625rem solid #ccc;
+    box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
 }
   
 .register-form h2 {
@@ -155,12 +168,12 @@ NUEVO USUARIO
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: .625rem;
 }
 
 .form-group input[type="text"],
@@ -168,20 +181,20 @@ NUEVO USUARIO
 .form-group input[type="password"],
 .form-group select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: .625rem;
+    border: .0625rem solid #ccc;
 }
 
 .form-group input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: .625rem;
 }
 
 .buttonC[type="submit"] {
     background-color: #4CAF50;
     color: #fff;
-    padding: 10px 20px;
+    padding: .625rem 1.25rem;
     border: none;
-    border-radius: 5px;
+    border-radius: .3125rem;
     cursor: pointer;
 }
 
@@ -202,16 +215,16 @@ PROYECTOS
 .proyectos {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Espacio entre las secciones */
+    gap: 1.25rem; /* Espacio entre las secciones */
     justify-content: space-between; /* Distribuye las secciones uniformemente */
 }
 
 .proyectoBack {
     background-image: url(../assets/recursos-img/backCompras.jpg);
-    width: calc(50% - 10px); /* Ancho de cada proyecto, calculado para 2 columnas */
-    border-radius: 8px;
+    width: calc(50% - .625rem); /* Ancho de cada proyecto, calculado para 2 columnas */
+    border-radius: .5rem;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -220,7 +233,7 @@ PROYECTOS
 }
 
 .proyectoBack:hover {
-    transform: translateY(-5px); /* Efecto de levantamiento al pasar el mouse */
+    transform: translateY(-0.3125rem); /* Efecto de levantamiento al pasar el mouse */
 }
 
 .proyecto img {
@@ -228,11 +241,11 @@ PROYECTOS
     height: auto;
     object-fit: cover;
     padding: 1em;
-    border-bottom: 1px solid #ccc; /* Borde inferior para la imagen */
+    border-bottom: .0625rem solid #ccc; /* Borde inferior para la imagen */
 }
 
 .proyecto .contenido {
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 .contenido{
@@ -245,19 +258,19 @@ PROYECTOS
 }
 
 .proyecto p {
-    margin: 10px 0;
+    margin: .625rem 0;
 }
 
 .price {
     display: block;
     font-weight: bold;
     color: #03182e;
-    margin-bottom: 10px;
+    margin-bottom: .625rem;
 }
 
 .proyecto .button {
     display: block;
-    padding: 10px 20px;
+    padding: .625rem 1.25rem;
     background-color: #007BFF;
     color: white;
     text-decoration: none;
@@ -280,33 +293,33 @@ TIENDA
 }
   
 .product {
-    flex-basis: calc(33.33% - 20px);
-    margin: 10px;
-    padding: 20px;
+    flex-basis: calc(33.33% - 1.25rem);
+    margin: .625rem;
+    padding: 1.25rem;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: .625rem;
 }
 
 .product h2 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: .625rem;
 }
 
 .product.description {
-    margin-bottom: 15px;
+    margin-bottom: .9375rem;
 }
 
 .product img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: .625rem;
 }
 
 .price {
     display: block;
     font-weight: bold;
     color: #03182e;
-    margin-bottom: 10px;
+    margin-bottom: .625rem;
 }
 
 .product.button:hover {
@@ -330,19 +343,19 @@ PDF
 */
 
 main section.unidad.pdf {
-    width: 200px;
-    height: 300px;
+    width: 12.5rem;
+    height: 18.75rem;
     overflow: hidden;
 }
 
 .pdfArchivo {
-    width: 240px;
-    height: 340px;
+    width: 15rem;
+    height: 21.25rem;
     overflow: hidden;
 }
 
 .pdf, .descripcion {
-    padding: 4px; /* Relleno para los elementos */
+    padding: .25rem; /* Relleno para los elementos */
 }
 
 .titlePdf {
@@ -367,7 +380,7 @@ main section ul.redes {
 
 /* Estilo para cada elemento de la lista */
 main section ul.redes li {
-    margin: 10px; /* Espaciado entre elementos */
+    margin: .625rem; /* Espaciado entre elementos */
 }
 
 /*
@@ -377,15 +390,15 @@ BOTONES DE CONTACTO
 /* Estilo para los botones de contacto */
 main section ul.redes li .contact-button {
     display: inline-block; /* Convertir en botón */
-    padding: 10px; /* Relleno interno */
-    border-radius: 5px; /* Esquinas curvas */
+    padding: .625rem; /* Relleno interno */
+    border-radius: .3125rem; /* Esquinas curvas */
     transition: transform 0.3s; /* Transición para el efecto hover */
 }
 
 /* Estilo para las imágenes dentro de los botones de contacto */
 main section ul.redes li .contact-button img {
-    max-width: 55px; /* Tamaño máximo de la imagen */
-    border-radius: 10px; /* Esquinas curvas de la imagen */
+    max-width: 3.4375rem; /* Tamaño máximo de la imagen */
+    border-radius: .625rem; /* Esquinas curvas de la imagen */
 }
 
 /* Colores específicos para cada plataforma */
@@ -417,12 +430,12 @@ main section ul.redes li .contact-button:hover {
 /* Estilo para los enlaces */
 main section a.button {
     display: inline-block; /* Convertir en botón */
-    padding: 10px 20px; /* Relleno interno */
-    margin-top: 10px; /* Espaciado superior */
+    padding: .625rem 1.25rem; /* Relleno interno */
+    margin-top: .625rem; /* Espaciado superior */
     background-color: #007BFF; /* Color de fondo del botón */
     color: white; /* Color del texto del botón */
     text-decoration: none; /* Sin subrayado */
-    border-radius: 5px; /* Esquinas curvas del botón */
+    border-radius: .3125rem; /* Esquinas curvas del botón */
     transition: background-color 0.3s; /* Transición para el cambio de color */
 }
 
@@ -456,7 +469,7 @@ BOTON "VER MAS"
     color: #fff;
     background-color: #1F2024;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: .3125rem;
 }
 
 .button {
@@ -465,7 +478,7 @@ BOTON "VER MAS"
     color: #fff;
     background-color: #007BFF;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: .3125rem;
 }
 
 .button:hover {
@@ -481,7 +494,7 @@ BLOG
     display: flex;
     justify-content: flex-end; /* Aligns the content to the right */
     align-items: center; /* Centers the content vertically (optional) */
-    height: 10px; /* Example height for the container */
+    height: .625rem; /* Example height for the container */
     color:#1F2024;
 }
 
@@ -499,8 +512,8 @@ footer {
     text-align: center;
     padding: 1rem 0;
     clear: both; /* Limpiar los flotantes */
-    margin-left: 250px;
-}
+    margin-left: 15.625rem; /* Ajustar el margen izquierdo para que no se superponga con el header */
+  }
 
 .buttonFooter {
     display: flex;
