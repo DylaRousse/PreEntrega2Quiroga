@@ -11,38 +11,54 @@ body {
     line-height: 1.6;
     background-image: url("/assets/recursos-img/fondo.png");
     width: 100%; /* Ancho completo de la pantalla */
-    margin: 0;
-    padding: 0;
+    margin: .3125rem;
+    padding: .625rem;
+    padding-right: .625rem;
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: 1fr auto;
+    gap: 1.25rem;
+    grid-template-areas:
+        "header main"
+        "header footer";
+    height: 100vh; /* Altura completa de la pantalla */
+    overflow: hidden; /* Ocultar el scroll bar del body */
 }
+
+.grid-header {
+    grid-area: header;
+    padding: 1.25rem;
+    position: sticky; /* Anclar el header a la parte superior */
+    top: 0;
+    left: 0;
+    height: 100%; /* Ocupar toda la altura disponible */
+}
+
+.grid-main {
+    grid-area: main;
+    overflow-y: auto; /* Agregar scroll bar solo al main */
+}
+
+.grid-footer {
+    grid-area: footer;
+    background: #333;
+    color: #fff;
+    position: sticky; /* Anclar el footer a la parte inferior */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ocupar toda la anchura disponible */
+    height: 10vh; /* Altura del footer */
+}
+
 
 /* Estilos de encabezado y navegación */
 header {
     background: #004F4D;
     color: #fff;
     padding: 1rem;
-    width: 15.625rem; /* Ancho de la barra lateral */
-    height: 100vh; /* Alto completo de la pantalla */
-    position: fixed; /* Barra lateral fija */
-    left: 0px; /* Alinear a la izquierda */
-    top: 0; /* Alinear arriba */
+    border: 2px solid #1F2024; /* Borde metálico */
+    border-radius:.9375rem; /* Esquinas curvas */
     overflow-y: auto; /* Scroll vertical si es necesario */
-}
-
-
-header::-webkit-scrollbar {
-    width: 10px; /* ancho del scroll */
-    height: 10px;
-    background-color: #333; /* color del fondo del scroll */
-}
-  
-header::-webkit-scrollbar-thumb {
-    background-color: #666; /* color del botón del scroll */
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-  
-header::-webkit-scrollbar-thumb:hover {
-    background-color: #888; /* color del botón del scroll al pasar el mouse */
 }
 
 header nav {
@@ -82,11 +98,28 @@ header nav ul li a:hover {
     background-color: #555; /* Cambiar el color de fondo al pasar el mouse */
 }
 
+/* HEADER SCROLLBAR */
+
+header::-webkit-scrollbar {
+    width: 10px; /* ancho del scroll */
+    height: 10px;
+    background-color: #333; /* color del fondo del scroll */
+}
+  
+header::-webkit-scrollbar-thumb {
+    background-color: #666; /* color del botón del scroll */
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+  
+header::-webkit-scrollbar-thumb:hover {
+    background-color: #888; /* color del botón del scroll al pasar el mouse */
+}
+
 
 /* Estilos de contenido principal */
 main {
-    margin-left: 15.625rem; /* Dejar espacio a la izquierda para la barra lateral */
-    padding: 2rem;
+    padding: .9375rem;
 }
 
 /* Estilo general para las secciones */
@@ -136,8 +169,8 @@ main section.unidadIndex {
 
 main section.unidadInfo {
     display: block;
-    margin-left: 1.875rem;
-    margin-right: 1.875rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
     background-color: #680775;
 }
 
@@ -148,8 +181,14 @@ main section.unidadBlog {
     background-color: #130330;
 }
 
+main section.unidad.pdf {
+    width: 12.5rem;
+    height: 18.75rem;
+    overflow: hidden;
+}
+
 /*
-NUEVO USUARIO
+NUEVO USUARIO INDEX
 */
 
 .nuevoUsuario {
@@ -169,6 +208,10 @@ NUEVO USUARIO
     border-bottom: .125rem solid #000000; /* Línea debajo del h2 */
     padding-bottom: .625rem; 
 }
+
+/*
+NUEVO USUARIO PAGE
+*/
 
 .register-form {
     max-width: 25rem;
@@ -223,7 +266,6 @@ NUEVO USUARIO
     opacity: 0.5;
     cursor: not-allowed;
 }
-
 
 /*
 PROYECTOS
@@ -344,31 +386,25 @@ TIENDA
 }  
 
 /*
-INORMACION
+INFORMACION
 */
 
 
-/* OGANIZADOR HORIZONTAL DE BOX DEL PDF */
 .pdfDescripcion {
-    display: flex; /* Activa el modo flexbox para el contenedor */
-    justify-content: space-around; /* Distribuye el espacio entre los elementos */
-    align-items: center; /* Alinea los elementos verticalmente al centro */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
 }
 
 /*
 PDF
 */
 
-main section.unidad.pdf {
-    width: 12.5rem;
-    height: 18.75rem;
-    overflow: hidden;
-}
-
 .pdfArchivo {
-    width: 15rem;
-    height: 21.25rem;
-    overflow: hidden;
+    width: 100%; /* Ancho del contenedor */
+    height: 85%; /* Alto del contenedor */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga del contenedor */
 }
 
 .pdf, .descripcion {
@@ -523,14 +559,15 @@ FOOTER
 footer {
     display: flex;
     justify-content: space-around;
-    align-items: baseline;
+    align-items: center;
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem;
+    border: 2px solid #1F2024; /* Borde metálico */
+    border-radius: .9375rem; /* Esquinas curvas */
     clear: both; /* Limpiar los flotantes */
-    margin-left: 15.625rem; /* Ajustar el margen izquierdo para que no se superponga con el header */
-  }
+}
 
 .buttonFooter {
     display: flex;
@@ -548,9 +585,17 @@ Estilos responsivos
 /* Media Queries */
 @media (max-width: 48rem) { /* 768px */
     header {
-        width: 100%;
-        height: auto;
-        position: relative;
+        padding: 0.5rem; /* Reducir padding para tamaños de pantalla más pequeños */
+    }
+    header nav.profile-img {
+        width: 8rem; /* Reducir tamaño de la imagen circular */
+        height: 8rem;
+    }
+    header nav ul li {
+        margin-bottom: 0.5rem; /* Reducir espacio entre elementos */
+    }
+    header nav ul li a {
+        padding: 0.25rem 0.5rem; /* Reducir espacio alrededor de los enlaces */
     }
 
     main {
@@ -568,8 +613,18 @@ Estilos responsivos
 }
 
 @media (max-width: 30rem) { /* 480px */
+    header {
+        padding: 0.25rem; /* Reducir padding aún más para tamaños de pantalla muy pequeños */
+    }
+    header nav.profile-img {
+        width: 6rem; /* Reducir tamaño de la imagen circular aún más */
+        height: 6rem;
+    }
+    header nav ul li {
+        margin-bottom: 0.25rem; /* Reducir espacio entre elementos aún más */
+    }
     header nav ul li a {
-        padding: 0.5rem;
+        padding: 0.1rem 0.25rem; /* Reducir espacio alrededor de los enlaces aún más */
     }
 
     .register-form {
