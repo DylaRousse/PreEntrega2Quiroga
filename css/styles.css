@@ -613,15 +613,33 @@ Estilos responsivos
 }
 
 @media (max-width: 30rem) { /* 480px */
+    .grid-container {
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 60% 15%;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+    .grid-header {
+        height: 100%; /* Ocupa el 100% de la altura en vista móvil */
+    }
+    .grid-main {
+        height: 85%; /* Ajusta la altura del main en vista móvil */
+    }
+    .grid-footer {
+        width: 75%;
+        height: 15%; /* Ajusta la altura del footer en vista móvil */
+    }
     header {
         padding: 0.25rem; /* Reducir padding aún más para tamaños de pantalla muy pequeños */
     }
     header nav.profile-img {
-        width: 6rem; /* Reducir tamaño de la imagen circular aún más */
-        height: 6rem;
+        width: 2.5rem; /* Reducir tamaño de la imagen circular aún más */
+        height: 2.5rem;
     }
     header nav ul li {
-        margin-bottom: 0.25rem; /* Reducir espacio entre elementos aún más */
+        margin-bottom: 0.1rem; /* Reducir espacio entre elementos aún más */
     }
     header nav ul li a {
         padding: 0.1rem 0.25rem; /* Reducir espacio alrededor de los enlaces aún más */
