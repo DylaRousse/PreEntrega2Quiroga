@@ -645,6 +645,11 @@ Estilos responsivos
         padding: 0.1rem 0.25rem; /* Reducir espacio alrededor de los enlaces aún más */
     }
 
+    footer {
+        padding: 0;
+        
+    }
+
     .register-form {
         padding: 1rem;
     }
