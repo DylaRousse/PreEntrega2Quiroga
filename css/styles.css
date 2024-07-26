@@ -645,6 +645,12 @@ Estilos responsivos
         padding: 0.1rem 0.25rem; /* Reducir espacio alrededor de los enlaces aún más */
     }
 
+    main section.unidadIndex {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+        
+    }
+
     footer {
         padding: 0;
         
