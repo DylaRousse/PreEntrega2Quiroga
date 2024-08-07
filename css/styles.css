@@ -123,12 +123,6 @@ header::-webkit-scrollbar-thumb:hover {
     background-color: #888; /* color del botón del scroll al pasar el mouse */
 }
 
-
-/* Estilos de contenido principal */
-main {
-    padding: .9375rem;
-}
-
 /* Estilo general para las secciones */
 main section {
     background-color: #127369; /* Color de fondo claro para el contenedor */
@@ -590,36 +584,73 @@ Estilos responsivos
 */
 
 /* Media Queries */
-@media (max-width: 48rem) { /* 768px */
+@media (min-width: 48rem) and (max-width: 62.5rem) {
     header {
-        padding: 0.5rem; /* Reducir padding para tamaños de pantalla más pequeños */
+        padding: 1rem; /* Aumentar el padding del header en tabletas */
     }
     header nav.profile-img {
-        width: 8rem; /* Reducir tamaño de la imagen circular */
-        height: 8rem;
+        width: 4rem; /* Aumentar tamaño de la imagen circular */
+        height: 4rem;
     }
     header nav ul li {
-        margin-bottom: 0.5rem; /* Reducir espacio entre elementos */
+        margin-bottom: 0.25rem; /* Ajustar espacio entre elementos */
     }
     header nav ul li a {
-        padding: 0.25rem 0.5rem; /* Reducir espacio alrededor de los enlaces */
+        padding: 0.5rem 1rem; /* Ajustar espacio alrededor de los enlaces */
     }
 
     main {
-        margin-left: 0;
-        padding: 1rem;
+        margin-left: 1rem;
+        padding: 2rem;
     }
 
     .proyectos, .products, .blog-container {
-        flex-direction: column;
+        flex-direction: row; /* Cambiar a fila para más espacio */
+        flex-wrap: wrap; /* Permitir que los elementos se ajusten */
     }
 
     .proyectoBack, .product, .blog {
-        flex-basis: 100%;
+        flex-basis: 45%; /* Ajustar ancho para permitir dos elementos por fila */
+        margin: 1rem; /* Añadir margen para separación */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 3fr 1fr; /* Ajustar columnas para tabletas */
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "header header header"
+            "main main main"
+            "footer footer footer";
+    }
+    .grid-header {
+        height: auto; /* Ajustar altura del header */
+    }
+    .grid-main {
+        height: auto; /* Ajustar altura del main */
+        padding: 1rem;
+    }
+    .grid-footer {
+        height: auto; /* Ajustar altura del footer */
+    }
+    .pdfArchivo {
+        height: 60vh; /* Ajustar altura del PDF en tabletas */
+    }
+    .register-form {
+        padding: 1.5rem;
+    }
+    .register-form h2 {
+        font-size: 1.5rem;
+    }
+    .media {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: space-evenly;
     }
 }
 
-@media (max-width: 30rem) { /* 480px */
+
+@media (max-width: 48rem) {
 
     body {
         margin: .625rem;
@@ -640,6 +671,7 @@ Estilos responsivos
     }
     .grid-main {
         height: 85%; /* Ajusta la altura del main en vista móvil */
+        padding: .0625rem;
     }
     .grid-footer {
         width: 75%;
