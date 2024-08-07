@@ -275,7 +275,6 @@ PROYECTOS
 .proyectos {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.25rem; /* Espacio entre las secciones */
     justify-content: space-between; /* Distribuye las secciones uniformemente */
 }
 
