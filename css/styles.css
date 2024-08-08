@@ -11,7 +11,6 @@ body {
     line-height: 1.6;
     background-image: url("../assets/recursos-img/fondo.png");
     width: 100%; /* Ancho completo de la pantalla */
-    margin: .3125rem;
     padding: .625rem;
     padding-right: .625rem;
     display: grid;
@@ -352,7 +351,6 @@ TIENDA
 }
   
 .product {
-    flex-basis: calc(33.33% - 1.25rem);
     margin: .625rem;
     padding: 1.25rem;
     border: 1px solid #ccc;
