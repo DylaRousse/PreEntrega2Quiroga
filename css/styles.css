@@ -345,9 +345,9 @@ TIENDA
 */
 
 .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Ajusta el espacio entre columnas y filas según tus necesidades */
 }
   
 .product {
@@ -387,30 +387,8 @@ TIENDA
 INFORMACION
 */
 
-
-.pdfDescripcion {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 10px;
-}
-
-/*
-PDF
-*/
-
-.pdfArchivo {
-    width: 100%; /* Ancho del contenedor */
-    height: 85%; /* Alto del contenedor */
-    overflow: hidden; /* Oculta cualquier contenido que sobresalga del contenedor */
-}
-
-.pdf, .descripcion {
+.descripcion {
     padding: .25rem; /* Relleno para los elementos */
-}
-
-.titlePdf {
-    color: #05070f;
 }
 
 .skills {
@@ -629,8 +607,10 @@ Estilos responsivos
     .grid-footer {
         height: auto; /* Ajustar altura del footer */
     }
-    .pdfArchivo {
-        height: 60vh; /* Ajustar altura del PDF en tabletas */
+    .products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: .625rem; /* Ajusta el espacio entre columnas y filas según tus necesidades */
     }
     .register-form {
         padding: 1.5rem;
@@ -723,6 +703,12 @@ Estilos responsivos
     .grid-footer {
         width: 100%; /* Ocupar toda la anchura disponible */
         height: 100%; /* Altura del footer */
+    }
+
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .register-form {
